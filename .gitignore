@@ -8,3 +8,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+data/new-file.csv
+data/new-file2.csv
+.php_cs.cache
