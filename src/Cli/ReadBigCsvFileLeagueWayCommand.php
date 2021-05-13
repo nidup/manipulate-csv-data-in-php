@@ -38,7 +38,7 @@ class ReadBigCsvFileLeagueWayCommand extends Command
             $csv->setHeaderOffset(0);
             $rows = $csv->getRecords();
             foreach ($rows as $row) {
-                // to nothing, but we want to browse each row
+                // do nothing, but we want to browse each row
             }
             $this->stopwatch->stop($section);
             $output->writeln("I read ".$csv->count()." rows from the CSV File ".$path);
