@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Cli;
 
 use League\Csv\Reader;
+use League\Csv\UnavailableStream;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -29,19 +30,23 @@ class ReadBigCsvFileLeagueWayCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $section = 'read_csv_file';
-        $this->stopwatch->start($section);
-        $path = 'data/movies-10000.csv';
-        $csv = Reader::createFromPath($path, 'r');
-        $csv->setHeaderOffset(0);
-        $rows = $csv->getRecords();
-        foreach ($rows as $row) {
-            // to nothing, but we want to browse each row
+        try {
+            $section = 'read_csv_file';
+            $this->stopwatch->start($section);
+            $path = 'data/movies-1000000.csv';
+            $csv = Reader::createFromPath($path, 'r');
+            $csv->setHeaderOffset(0);
+            $rows = $csv->getRecords();
+            foreach ($rows as $row) {
+                // to nothing, but we want to browse each row
+            }
+            $this->stopwatch->stop($section);
+            $output->writeln("I read ".$csv->count()." rows from the CSV File ".$path);
+            $output->writeln((string) $this->stopwatch->getEvent($section));
+            return 0;
+        } catch (UnavailableStream $exception) {
+            $output->writeln("File ".$path." does not exist, it has to be generated with the command 'nidup:csv-league:generate-big-csv-file'");
+            return -1;
         }
-        $this->stopwatch->stop($section);
-        $output->writeln("I read ".$csv->count()." rows from the CSV File ".$path);
-        $output->writeln((string) $this->stopwatch->getEvent($section));
-
-        return 0;
     }
 }

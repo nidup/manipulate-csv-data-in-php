@@ -36,5 +36,4 @@ class WriteCsvFileNativeWayCommand extends Command
 
         return 0;
     }
-
 }

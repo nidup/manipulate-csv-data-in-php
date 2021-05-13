@@ -38,13 +38,14 @@ Use `bin/console` or `.docker/bin/console` to launch a command.
 
 List the commands:
 ```
-bin/console
+bin/console --env=prod
 [...]
-nidup:csv-league:read-big-csv-file  Read a big csv file (with league csv) and measure time and memory usage
-nidup:csv-league:read-csv-file      Read a csv file (with league csv)
-nidup:csv-league:write-csv-file     Write a csv file (with league csv)
-nidup:csv-native:read-csv-file      Read a csv file (with native functions)
-nidup:csv-native:write-csv-file     Write a csv file (with native functions)
+nidup:csv-league:generate-big-csv-file  Generate a 1M lines csv file (with league csv)
+nidup:csv-league:read-big-csv-file      Read a big csv file and measure time and memory (with league csv)
+nidup:csv-league:read-csv-file          Read a csv file (with league csv)
+nidup:csv-league:write-csv-file         Write a csv file (with league csv)
+nidup:csv-native:read-csv-file          Read a csv file (with native functions)
+nidup:csv-native:write-csv-file         Write a csv file (with native functions)
 [...]
 ```
 
@@ -52,3 +53,5 @@ Launch a command:
 ```
 bin/console nidup:csv-league:read-csv-file --env=prod
 ```
+
+We use the prod environment here to have the most efficient execution.
