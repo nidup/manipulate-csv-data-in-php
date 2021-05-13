@@ -1,8 +1,8 @@
-# Manipulate CSV Data in PHP
+# Manipulate CSV Data in PHP 🐘
 
 Tutorial and examples on How to Manipulate CSV Files in PHP.
 
-## Installation
+## Installation 📦
 
 Download the source code:
 
@@ -11,11 +11,11 @@ git clone git@github.com:nidup/manipulate-csv-data-in-php.git
 cd manipulate-csv-data-in-php
 ```
 
-Then the installation comes into 2 flavor, directly on your host or using docker.
+Then the installation comes into 2 flavors, directly on your host or using docker.
 
 Once installed the commands are the same, some docker shortcuts are provided in `.docker/bin`. 
 
-### Install directly on your system (option A)
+### Install directly on your system (option A) 💻
 
 Install the PHP dependencies: 
 
@@ -23,24 +23,32 @@ Install the PHP dependencies:
 composer install
 ```
 
-### Install with docker & docker-compose (option B)
+### Install with docker & docker-compose (option B) 🐋
 
 Build the docker image and install the PHP dependencies:
 
 ```
 docker-compose up -d 
-./docker/bin/composer install
+.docker/bin/composer install
 ```
 
-### Test the console
+## Use the console commands 🚀
 
-List the commands (Option A):
+Use `bin/console` or `.docker/bin/console` to launch a command.
+
+List the commands:
 ```
 bin/console
+[...]
+nidup:csv-league:read-big-csv-file  Read a big csv file (with league csv) and measure time and memory usage
+nidup:csv-league:read-csv-file      Read a csv file (with league csv)
+nidup:csv-league:write-csv-file     Write a csv file (with league csv)
+nidup:csv-native:read-csv-file      Read a csv file (with native functions)
+nidup:csv-native:write-csv-file     Write a csv file (with native functions)
+[...]
 ```
 
-List the commands (Option B):
+Launch a command:
 ```
-.docker/bin/console
+bin/console nidup:csv-league:read-csv-file --env=prod
 ```
-

@@ -8,12 +8,12 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class WriteCsvFileOldWayCommand extends Command
+class WriteCsvFileNativeWayCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('nidup:csv-old-way:write-csv-file')
-            ->setDescription('Write a csv file');
+        $this->setName('nidup:csv-native:write-csv-file')
+            ->setDescription('Write a csv file (with native functions)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -36,4 +36,5 @@ class WriteCsvFileOldWayCommand extends Command
 
         return 0;
     }
+
 }

@@ -9,12 +9,12 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class ReadCsvFileNewWayCommand extends Command
+class ReadCsvFileLeagueWayCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('nidup:csv-new-way:read-csv-file')
-            ->setDescription('Read a csv file');
+        $this->setName('nidup:csv-league:read-csv-file')
+            ->setDescription('Read a csv file (with league csv)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

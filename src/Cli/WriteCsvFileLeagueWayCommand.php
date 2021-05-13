@@ -9,12 +9,12 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class WriteCsvFileNewWayCommand extends Command
+class WriteCsvFileLeagueWayCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('nidup:csv-new-way:write-csv-file')
-            ->setDescription('Write a csv file');
+        $this->setName('nidup:csv-league:write-csv-file')
+            ->setDescription('Write a csv file (with league csv)');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
