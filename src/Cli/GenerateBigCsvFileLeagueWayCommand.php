@@ -30,12 +30,14 @@ class GenerateBigCsvFileLeagueWayCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $pathBig = 'data/movies-1000000.csv';
-        $csvBig = Writer::createFromPath($pathBig, 'w');
+        // read 10k line in CSV
         $path = 'data/movies-10000.csv';
         $csv = Reader::createFromPath($path, 'r');
         $csv->setHeaderOffset(0);
         $rows = $csv->getRecords();
+        // generate 1M lines
+        $pathBig = 'data/movies-1000000.csv';
+        $csvBig = Writer::createFromPath($pathBig, 'w');
         $csvBig->insertOne($csv->getHeader());
         for ($idx = 0; $idx < 100; $idx++) {
             $csvBig->insertAll($rows);

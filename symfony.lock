@@ -1,4 +1,7 @@
 {
+    "box/spout": {
+        "version": "v3.3.0"
+    },
     "league/csv": {
         "version": "9.7.1"
     },

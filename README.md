@@ -40,12 +40,16 @@ List the commands:
 ```
 bin/console --env=prod
 [...]
-nidup:csv-league:generate-big-csv-file  Generate a 1M lines csv file (with league csv)
-nidup:csv-league:read-big-csv-file      Read a big csv file and measure time and memory (with league csv)
-nidup:csv-league:read-csv-file          Read a csv file (with league csv)
-nidup:csv-league:write-csv-file         Write a csv file (with league csv)
-nidup:csv-native:read-csv-file          Read a csv file (with native functions)
-nidup:csv-native:write-csv-file         Write a csv file (with native functions)
+nidup:csv-league:generate-big-csv-file     Generate a 1M lines csv file (with league csv)
+nidup:csv-league:read-big-csv-file         Read a big csv file and measure time and memory (with league csv)
+nidup:csv-league:read-csv-file             Read a csv file (with league csv)
+nidup:csv-league:write-csv-file            Write a csv file (with league csv)
+nidup:csv-native:read-csv-file             Read a csv file (with native functions)
+nidup:csv-native:write-csv-file            Write a csv file (with native functions)
+nidup:excel-league:read-big-excel-file     Read a big excel file and measure time and memory (with box/spout)
+nidup:excel-spout:generate-big-excel-file  Generate a 1M lines excel file (with box/spout)
+nidup:excel-spout:read-excel-file          Read an excel file (with box/spout)
+nidup:excel-spout:write-excel-file         Write an excel file (with box/spout)
 [...]
 ```
 
