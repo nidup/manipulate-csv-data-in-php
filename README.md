@@ -1,6 +1,6 @@
 # Manipulate CSV Data in PHP 🐘
 
-Tutorial and examples on [How to Manipulate CSV Files in PHP](https://www.nidup.io/blog/manipulate-csv-files-in-php).
+Tutorial and examples on [How to Manipulate CSV Files in PHP](https://www.nidup.io/blog/manipulate-csv-files-in-php) and [How to Manipulate Excel Files in PHP](https://www.nidup.io/blog/manipulate-excel-files-in-php).
 
 ## Installation 📦
 
