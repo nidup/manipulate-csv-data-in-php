@@ -16,9 +16,9 @@ class ReadBigCsvFileLeagueWayCommand extends Command
     /** @var Stopwatch */
     private $stopwatch;
 
-    public function __construct(?string $name = null, Stopwatch $stopwatch)
+    public function __construct(Stopwatch $stopwatch)
     {
-        parent::__construct($name);
+        parent::__construct();
         $this->stopwatch = $stopwatch;
     }
 

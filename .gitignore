@@ -12,3 +12,4 @@ data/new-file.csv
 data/new-file2.csv
 data/movies-1000000.csv
 .php_cs.cache
+.idea
