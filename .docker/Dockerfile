@@ -14,3 +14,6 @@ RUN apt-get install -y libzip-dev zip && docker-php-ext-install zip
 
 # Install php cs fixer
 RUN curl -L https://cs.symfony.com/download/php-cs-fixer-v2.phar -o php-cs-fixer && chmod a+x php-cs-fixer && mv php-cs-fixer /usr/local/bin/php-cs-fixer
+
+# Increase PHP Memory Limit to do some tests on large JSON file
+# RUN echo 'memory_limit = 2048M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;

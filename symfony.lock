@@ -2,6 +2,9 @@
     "box/spout": {
         "version": "v3.3.0"
     },
+    "halaxa/json-machine": {
+        "version": "1.1.1"
+    },
     "league/csv": {
         "version": "9.7.1"
     },
