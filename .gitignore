@@ -17,3 +17,4 @@ data/movies-1000000.xlsx
 data/movies-500000.json
 .php_cs.cache
 .idea
+data/credentials.json
