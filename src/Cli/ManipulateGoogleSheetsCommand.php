@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Cli;
 
+use Google\Service\Sheets\BatchGetValuesByDataFilterRequest;
+use Google\Service\Sheets\DataFilter;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -57,11 +59,59 @@ class ManipulateGoogleSheetsCommand extends Command
 
         // retrieve the 10 first rows of the sheet
         if (false) {
-            $range = 'A1:F10';
+            $range = 'Sheet1!A1:F10';
             $response = $service->spreadsheets_values->get($spreadsheetId, $range);
             $values = $response->getValues();
             var_dump($values);
         }
+
+        // Transform Rows in Associative Array
+        if (false) {
+            // Fetch the rows
+            $range = 'Sheet1';
+            $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+            $rows = $response->getValues();
+            // Remove the first one that contains headers
+            $headers = array_shift($rows);
+            // Combine the headers with each following row
+            $array = [];
+            foreach ($rows as $row) {
+                $array[] = array_combine($headers, $row);
+            }
+            var_dump($array);
+
+            // transform to json string
+            $jsonString = json_encode($array, JSON_PRETTY_PRINT);
+            print($jsonString);
+        }
+
+        // Fetch a single column
+        if (false) {
+            $range = 'Sheet1!B1:B21'; // the title column
+            $response = $service->spreadsheets_values->get($spreadsheetId, $range);
+            $values = $response->getValues();
+            var_dump($values);
+        }
+
+
+        // Fetch the rows by a filter
+        // TODO: does not work
+        /*
+        $range = 'Sheet1';
+        $filters = new BatchGetValuesByDataFilterRequest();
+        $filters->setDataFilters(
+            [
+                [
+                    "developerMetadataLookup" => [
+                        "metadataValue" => "Captain Marvel"
+                    ]
+                ]
+            ]
+        );
+        $response = $service->spreadsheets_values->batchGetByDataFilter($spreadsheetId, $filters);
+        $values = $response->getValueRanges();
+        var_dump($values);
+        */
 
         // append a new row
         if (false) {
