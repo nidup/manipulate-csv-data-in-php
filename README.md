@@ -1,10 +1,10 @@
 # Manipulate Files in PHP 🐘
 
 Tutorial and examples for following Blog Posts:
- - [How to Manipulate CSV Files in PHP](https://www.nidup.io/blog/manipulate-csv-files-in-php)
- - [How to Manipulate Excel Files in PHP](https://www.nidup.io/blog/manipulate-excel-files-in-php)
- - [How to Manipulate JSON Files in PHP](https://www.nidup.io/blog/manipulate-json-files-in-php)
- - [How to Manipulate Google Sheets in PHP](https://www.nidup.io/blog/manipulate-google-sheets-in-php-with-api)
+ - [How to Read and Write CSV Files in PHP](https://www.nidup.io/blog/manipulate-csv-files-in-php)
+ - [How to Read and Write Excel Files in PHP](https://www.nidup.io/blog/manipulate-excel-files-in-php)
+ - [How to Read and Write JSON Files in PHP](https://www.nidup.io/blog/manipulate-json-files-in-php)
+ - [How to Read and Write Google Sheets in PHP](https://www.nidup.io/blog/manipulate-google-sheets-in-php-with-api)
 
 ## Installation 📦
 
