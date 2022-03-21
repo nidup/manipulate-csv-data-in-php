@@ -34,14 +34,21 @@ class WriteCsvFileLeagueWayCommand extends Command
             $output->writeln("I wrote the CSV File ".$path);
         }
 
-        $appendRows = [
-            [324857, "Spider-Man: Into the Spider-Verse", "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg", "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson 'Kingpin' Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",1544140800,"Action, Adventure, Animation, Science Fiction, Comedy"],
-            [456740, "Hellboy", "https://image.tmdb.org/t/p/w500/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg", "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",1554944400,"Fantasy, Action"]
-        ];
-        $path = 'data/new-file2.csv';
-        $csv = Writer::createFromPath($path, 'a+');
-        $csv->insertAll($appendRows);
-        $output->writeln("I append lines in the CSV File ".$path);
+        // append rows
+        if (false) {
+            $appendRows = [
+                [324857, "Spider-Man: Into the Spider-Verse", "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg", "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson 'Kingpin' Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",1544140800,"Action, Adventure, Animation, Science Fiction, Comedy"],
+                [456740, "Hellboy", "https://image.tmdb.org/t/p/w500/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg", "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",1554944400,"Fantasy, Action"]
+            ];
+            $path = 'data/new-file2.csv';
+            $csv = Writer::createFromPath($path, 'a+');
+            $csv->insertAll($appendRows);
+            $output->writeln("I append lines in the CSV File ".$path);
+        }
+
+
+
+
 
         return 0;
     }

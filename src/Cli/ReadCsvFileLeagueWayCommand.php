@@ -23,7 +23,7 @@ class ReadCsvFileLeagueWayCommand extends Command
         $path = 'data/movies-100.csv';
 
         // read all lines
-        if (false) {
+        if (true) {
             $csv = Reader::createFromPath($path, 'r');
             $csv->setHeaderOffset(0); // use the first line as header for rows
             $header = $csv->getHeader();
@@ -85,7 +85,7 @@ class ReadCsvFileLeagueWayCommand extends Command
         }
 
         // sort rows
-        if (true) {
+        if (false) {
             $csv = Reader::createFromPath($path, 'r');
             $csv->setHeaderOffset(0);
             $stmt = Statement::create()
@@ -97,6 +97,17 @@ class ReadCsvFileLeagueWayCommand extends Command
             }
         }
 
+        if (false) {
+            // convert CSV to JSON
+            $csv = Reader::createFromPath($path, 'r');
+            // use the first line as header for rows
+            $csv->setHeaderOffset(0);
+            // get all the rows as an array of associative arrays
+            $data = $csv->jsonSerialize();
+            // encode the array to a json string
+            $jsonString = json_encode($data, JSON_PRETTY_PRINT);
+            print($jsonString);
+        }
 
         return 0;
     }
