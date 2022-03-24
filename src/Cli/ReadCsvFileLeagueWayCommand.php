@@ -18,6 +18,12 @@ class ReadCsvFileLeagueWayCommand extends Command
             ->setDescription('Read a csv file (with league csv)');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     * @throws \League\Csv\Exception
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $path = 'data/movies-100.csv';

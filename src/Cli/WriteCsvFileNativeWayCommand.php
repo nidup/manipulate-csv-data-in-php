@@ -16,6 +16,11 @@ class WriteCsvFileNativeWayCommand extends Command
             ->setDescription('Write a csv file (with native functions)');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $rows = [

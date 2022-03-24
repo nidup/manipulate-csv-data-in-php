@@ -28,6 +28,13 @@ class GenerateBigCsvFileLeagueWayCommand extends Command
             ->setDescription('Generate a 1M lines csv file (with league csv)');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     * @throws \League\Csv\CannotInsertRecord
+     * @throws \League\Csv\Exception
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         // read 10k line in CSV

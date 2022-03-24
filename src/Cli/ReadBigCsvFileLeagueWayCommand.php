@@ -28,6 +28,12 @@ class ReadBigCsvFileLeagueWayCommand extends Command
             ->setDescription('Read a big csv file and measure time and memory (with league csv)');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     * @throws \League\Csv\Exception
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         try {

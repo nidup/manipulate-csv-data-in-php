@@ -16,6 +16,11 @@ class ReadCsvFileNativeWayCommand extends Command
             ->setDescription('Read a csv file (with native functions)');
     }
 
+    /**
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * @return int
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $path = 'data/movies-100.csv';

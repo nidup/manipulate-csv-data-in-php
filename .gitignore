@@ -10,11 +10,6 @@
 ###< symfony/framework-bundle ###
 data/new-file.csv
 data/new-file2.csv
-data/new-file3.xlsx
-data/new-file.json
 data/movies-1000000.csv
-data/movies-1000000.xlsx
-data/movies-500000.json
 .php_cs.cache
 .idea
-data/credentials.json
